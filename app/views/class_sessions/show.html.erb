@@ -1,0 +1,24 @@
+<% title "Class Session Detail" %>
+<p>
+  <b>Course Type:</b>
+  <%=h @class_session.course_type.course_type_name rescue nil %>
+</p>
+
+<p>
+  <b>Class session name:</b>
+  <%=h @class_session.class_session_name %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%=h @class_session.day %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @class_session.start %>
+</p>
+
+
+<%= link_to 'Edit', edit_class_session_path(@class_session) %> |
+<%= link_to 'Back', class_sessions_path %>

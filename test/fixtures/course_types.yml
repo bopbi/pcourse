@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  course_type_name: MyString
+  course_type_fee: 1.5
+
+two:
+  course_type_name: MyString
+  course_type_fee: 1.5

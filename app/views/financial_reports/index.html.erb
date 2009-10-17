@@ -1,0 +1,28 @@
+<h1>Listing Financial Reports</h1>
+<%= link_to 'New Financial Report', new_financial_report_path %>
+<table>
+  <tr>
+    <th>Financial report date</th>
+    <th>Transaction type</th>
+    <th>Value</th>
+    <th>Debit</th>
+    <th>User</th>
+    <th colspan="3">Action</th>
+  </tr>
+
+<% @financial_reports.each do |financial_report| %>
+  <tr>
+    <td><%=h financial_report.financial_report_date %></td>
+    <td><%=h financial_report.transaction_type.transaction_type_code %></td>
+    <td><%=h financial_report.value %></td>
+    <td><%=h financial_report.debit %></td>
+    <td><%=h financial_report.user_id %></td>
+    <td><%= link_to 'Show', financial_report %></td>
+    <td><%= link_to 'Edit', edit_financial_report_path(financial_report) %></td>
+    <td><%= link_to 'Destroy', financial_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= will_paginate @financial_reports %>

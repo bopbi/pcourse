@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head>
+		<title>Quantum Kids Bandung - <%=h yield(:title) %></title>
+		<%= stylesheet_link_tag 'reset', 'text', '960' %>
+		<%= stylesheet_link_tag 'scaffold', 'superfish', 'muffin', 'qkids' %>
+		<%= javascript_include_tag 'jquery', 'hoverIntent', 'superfish' %>
+		
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+		
+		<%= yield(:head) %>
+	</head>
+	<body>
+		<div id="header_container">
+		<div class="container_12">
+			<div id="header" class="grid_12">
+				<h1>Quantum Kids -- Antapani</h1>
+				<div id="header_box">
+					<% if current_user %>
+						logged in as <%= current_user.username %> | <%= show_current_date %> | <%= link_to "Logout", logout_path %>
+					<% end %>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</div>
+		<div class="container_12">
+			<% if current_user %>
+				<%= render :partial => "shared/main_nav" %>
+			<% end %>
+			<% if flash[:notice] != nil %>
+			<div id="flash"><div class="notice"><%= flash[:notice] %></div></div>
+			<% end %>
+			<div class="grid_12">
+				<%= yield %>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				<hr />
+				Created By Bobby Adi Prabowo
+			</div>
+		</div>
+	</body>
+</html>

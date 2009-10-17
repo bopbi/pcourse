@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tutor_no: MyString
+  tutor_name: MyString
+
+two:
+  tutor_no: MyString
+  tutor_name: MyString

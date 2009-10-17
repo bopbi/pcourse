@@ -1,0 +1,20 @@
+<h1>Editing tutor</h1>
+
+<% form_for(@tutor, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tutor_no %><br />
+    <%= f.text_field :tutor_no %>
+  </p>
+  <p>
+    <%= f.label :tutor_name %><br />
+    <%= f.text_field :tutor_name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tutor %> |
+<%= link_to 'Back', tutors_path %>

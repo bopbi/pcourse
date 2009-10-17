@@ -1,0 +1,22 @@
+<p>
+  <b>Student:</b>
+  <%=h @student_attendance.student.name %>
+</p>
+
+<p>
+  <b>Class session:</b>
+  <%=h @student_attendance.class_session.class_session_name %>
+</p>
+
+<p>
+  <b>Date Attendance:</b>
+  <%=h student_attendance.student_attendance_date %>
+</p>
+
+<p>
+  <b>Attendance:</b>
+  <%=h @student_attendance.attendance %>
+</p>
+
+<%= link_to 'Edit', edit_student_attendance_path(@student_attendance) %> |
+<%= link_to 'Back', student_attendances_path %>

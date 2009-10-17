@@ -1,0 +1,28 @@
+<p>
+  <b>Financial report date:</b>
+  <%=h @financial_report.financial_report_date %>
+</p>
+
+<p>
+  <b>Transaction type:</b>
+  <%=h @financial_report.transaction_type.transaction_type_code %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @financial_report.value %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @financial_report.debit %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @financial_report.user.username %>
+</p>
+
+
+<%= link_to 'Edit', edit_financial_report_path(@financial_report) %> |
+<%= link_to 'Back', financial_reports_path %>

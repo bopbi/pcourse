@@ -1,0 +1,23 @@
+<h1>New Financial Report</h1>
+
+<% form_for(@financial_report) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :financial_report_date %><br />
+    <%= f.date_select :financial_report_date %>
+  </p>
+  <p>
+    <%= f.label :transaction_type_id %><br />
+    <%= f.collection_select :transaction_type_id, TransactionType.all , :id, :transaction_type_code %>
+  </p>
+  <p>
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', financial_reports_path %>

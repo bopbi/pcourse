@@ -1,0 +1,24 @@
+<h1>Editing Transaction Type</h1>
+
+<% form_for(@transaction_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :transaction_type_code %><br />
+    <%= f.text_field :transaction_type_code %>
+  </p>
+  <p>
+    <%= f.label :transaction_type_name %><br />
+    <%= f.text_field :transaction_type_name %>
+  </p>
+  <p>
+    <%= f.label :debit %><br />
+    <%= f.check_box :debit %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @transaction_type %> |
+<%= link_to 'Back', transaction_types_path %>

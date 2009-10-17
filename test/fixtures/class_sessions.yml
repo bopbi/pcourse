@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  class_session_name: MyString
+  day: MyString
+  start: MyString
+
+two:
+  class_session_name: MyString
+  day: MyString
+  start: MyString

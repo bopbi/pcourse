@@ -1,0 +1,43 @@
+<% title "Listing Students" %>
+<h1>Listing Students</h1>
+<%= link_to 'New Student', new_student_path %>
+<table>
+  <tr>
+    <th>Student no</th>
+    <th>Name</th>
+    <th>Date birth</th>
+    <th>Address</th>
+    <th>Phone number</th>
+    <th>Handphone number</th>
+    <th>School</th>
+    <th>Grade</th>
+    <th>Status</th>
+    <th colspan="3">Action</th>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%=h student.student_no %></td>
+    <td><%=h student.name %></td>
+    <td><%=h student.date_birth %></td>
+    <td><%=h student.address %></td>
+    <td><%=h student.phone_number %></td>
+    <td><%=h student.handphone_number %></td>
+    <td><%=h student.school.school_name rescue nil %></td>
+    <td><%=h student.grade %></td>
+    <td>
+		<% if student.status %>
+			Active
+		<% else %>
+			Out
+		<% end %>
+	</td>
+    <td><%= link_to 'Show', student %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Destroy', student, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= will_paginate @students %>

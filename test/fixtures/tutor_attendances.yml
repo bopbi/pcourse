@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tutor_id: 1
+  class_session_id: 1
+  attendance_day: 2009-10-16
+  attendance: false
+
+two:
+  tutor_id: 1
+  class_session_id: 1
+  attendance_day: 2009-10-16
+  attendance: false

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  transaction_type_code: MyString
+  transaction_type_name: MyString
+  type: false
+
+two:
+  transaction_type_code: MyString
+  transaction_type_name: MyString
+  type: false

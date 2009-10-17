@@ -1,0 +1,75 @@
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+a:hover {
+	background-color: transparent;
+	color: #000000;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+table {
+	width: 100%;
+}
+
+.notice {
+	background-color: #fdd910;
+	border: 1px solid #a8850c;
+	padding: 10px;
+	margin: 10px;
+}
+
+#header_container {
+	background-color: #fcfd05;
+	width: 100%;
+	height: 50px;
+	color: #fe0002;
+	border-bottom: 1px solid #fb504e;
+}
+
+#header {
+	padding-top: 15px;
+}
+
+#header h1 {
+	float: left;
+}
+
+#header_box {
+	float: right;
+}
+
+#header_box a:hover {
+	color: #000000;
+}
+
+#login_box {
+	border: 1px solid #b0b0b0;
+	padding: 10px;
+	width: 280px;
+	margin: 100px auto;
+}
+
+#user_session_username, #user_session_password {
+	font-size: 20px;
+	width: 270px;
+}
+
+#user_session_submit {
+	background-color: #fcf307;
+	color: #fb3a44;
+	border: 1px solid;
+	font-size: 20px;
+	margin-right: 12px;
+}
+
+#main_nav {
+	margin-top: 10px;
+}

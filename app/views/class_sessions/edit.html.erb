@@ -1,0 +1,28 @@
+<% title "Editting Class Session" %>
+<h1>Editing Class Session</h1>
+
+<% form_for(@class_session) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :course_type_id %><br />
+    <%= f.collection_select :course_type_id, CourseType.all , :id, :course_type_name %>
+  </p>
+  <p>
+    <%= f.label :class_session_name %><br />
+    <%= f.text_field :class_session_name %>
+  </p>
+  <p>
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </p>
+  <p>
+    <%= f.label :start %><br />
+    <%= f.text_field :start %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @class_session %> |
+<%= link_to 'Back', class_sessions_path %>

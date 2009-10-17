@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  financial_report_date: 2009-10-15
+  transaction_type_id: 1
+  value: 1.5
+  type: false
+  user_id: 1
+
+two:
+  financial_report_date: 2009-10-15
+  transaction_type_id: 1
+  value: 1.5
+  type: false
+  user_id: 1

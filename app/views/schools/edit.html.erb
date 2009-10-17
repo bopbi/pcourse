@@ -1,0 +1,24 @@
+<h1>Editing School</h1>
+
+<% form_for(@school) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :school_no %><br />
+    <%= f.text_field :school_no %>
+  </p>
+  <p>
+    <%= f.label :school_name %><br />
+    <%= f.text_field :school_name %>
+  </p>
+  <p>
+    <%= f.label :school_address %><br />
+    <%= f.text_area :school_address %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @school %> |
+<%= link_to 'Back', schools_path %>

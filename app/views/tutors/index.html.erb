@@ -1,0 +1,22 @@
+<h1>Listing Tutors</h1>
+<%= link_to 'New Tutor', new_tutor_path %>
+<table>
+  <tr>
+    <th>Tutor no</th>
+    <th>Tutor name</th>
+    <th colspan="3">Action</th>
+  </tr>
+
+<% @tutors.each do |tutor| %>
+  <tr>
+    <td><%=h tutor.tutor_no %></td>
+    <td><%=h tutor.tutor_name %></td>
+    <td><%= link_to 'Show', tutor %></td>
+    <td><%= link_to 'Edit', edit_tutor_path(tutor) %></td>
+    <td><%= link_to 'Destroy', tutor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= will_paginate @tutors %>

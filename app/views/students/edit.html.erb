@@ -1,0 +1,69 @@
+<% title "Editting Student" %>
+<h1>Editing Student</h1>
+
+<% form_for(@student, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :student_no %><br />
+    <%= f.text_field :student_no %>
+  </p>
+  <p>
+    <%= f.label :register_date %><br />
+    <%= f.date_select :register_date %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :place_birth %><br />
+    <%= f.text_field :place_birth %>
+  </p>
+  <p>
+    <%= f.label :date_birth %><br />
+    <%= f.date_select :date_birth %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :handphone_number %><br />
+    <%= f.text_field :handphone_number %>
+  </p>
+  <p>
+    <%= f.label :school_id %><br />
+    <%= f.collection_select :school_id, School.all , :id, :school_name %>
+  </p>
+  <p>
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade %>
+  </p>
+  <p>
+    <%= f.label :father_name %><br />
+    <%= f.text_field :father_name %>
+  </p>
+  <p>
+    <%= f.label :mother_name %><br />
+    <%= f.text_field :mother_name %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.check_box :status %> Active
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @student %> |
+<%= link_to 'Back', students_path %>

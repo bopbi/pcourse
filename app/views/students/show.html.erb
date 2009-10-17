@@ -1,0 +1,76 @@
+<p>
+  <b>Student no:</b>
+  <%=h @student.student_no %>
+</p>
+
+<p>
+  <b>Register date:</b>
+  <%=h @student.register_date %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @student.name %>
+</p>
+
+<p>
+  <b>Place birth:</b>
+  <%=h @student.place_birth %>
+</p>
+
+<p>
+  <b>Date birth:</b>
+  <%=h @student.date_birth %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @student.address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%=h @student.phone_number %>
+</p>
+
+<p>
+  <b>Handphone number:</b>
+  <%=h @student.handphone_number %>
+</p>
+
+<p>
+  <b>School:</b>
+  <%=h @student.school.school_name %>
+</p>
+
+<p>
+  <b>Grade:</b>
+  <%=h @student.grade %>
+</p>
+
+<p>
+  <b>Father name:</b>
+  <%=h @student.father_name %>
+</p>
+
+<p>
+  <b>Mother name:</b>
+  <%=h @student.mother_name %>
+</p>
+
+<p>
+	<%= image_tag @student.photo.url(:medium) rescue nil %>
+</p>
+
+<p>
+  <b>Status:</b>
+  	<% if @student.status %>
+		Active
+	<% else %>
+		Out
+	<% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

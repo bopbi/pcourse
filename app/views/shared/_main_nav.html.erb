@@ -1,0 +1,42 @@
+<div id="main_nav" class="grid_12">
+<ul class="sf-menu">
+	<li> <%= link_to "Dashboard", :controller => "dashboard" %> </li>
+	<li>
+		<a href="#"> Costumer </a>
+		<ul>
+			<li> <%= link_to "Student", students_path %> </li>
+			<li> <%= link_to "School", schools_path %> </li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Class</a>
+		<ul>
+			<li> <%= link_to "Student Attendance", student_attendances_path %> </li>
+			<li> <%= link_to "Class Session", class_sessions_path %> </li>
+			<li> <%= link_to "Course Type", course_types_path %> </li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Tutors</a>
+		<ul>
+			<li> <%= link_to "Tutors List", tutors_path %> </li>
+			<li> <%= link_to "Tutor Attendance", tutor_attendances_path %> </li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Finance</a>
+		<ul>
+			<li> <%= link_to "Finance Report", financial_reports_path %> </li>
+			<li> <%= link_to "Transaction Type", transaction_types_path %> </li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">System</a>
+		<ul>
+			<li> <%= link_to "Users", users_path %> </li>
+		</ul>
+	</li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
