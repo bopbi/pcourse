@@ -9,4 +9,8 @@ module ApplicationHelper
     Time.now.strftime('%A, %d %B, %Y')
   end
   
+  def show_current_date_sql
+    Time.now.strftime('%Y-%m-%d')
+  end
+  
 end

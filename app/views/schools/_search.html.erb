@@ -1,0 +1,17 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :school_no_like, "School No" %><br />
+    <%= f.text_field :school_no_like %>
+  </p>
+  <p>
+    <%= f.label :school_name_like, "School Name" %><br />
+    <%= f.text_field :school_name_like %>
+  </p>
+  <p>
+    <%= f.label :school_address_Like, "School Address" %><br />
+    <%= f.text_area :school_address_like %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

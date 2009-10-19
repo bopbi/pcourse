@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    @users = User.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
+    @role = { 'admin' => 'Admin', 'cs' => 'Costumer Service' }
+    @search = User.search(params[:search])
+    @users = @search.all.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +27,7 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     @user = User.new
-    @type = { 'admin' => 'Admin', 'cs' => 'Costumer Service' }
+    @role = { 'admin' => 'Admin', 'cs' => 'Costumer Service' }
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @user }
@@ -35,7 +37,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-    @type = { 'admin' => 'Admin', 'cs' => 'Costumer Service' }
+    @role = { 'admin' => 'Admin', 'cs' => 'Costumer Service' }
   end
 
   # POST /users

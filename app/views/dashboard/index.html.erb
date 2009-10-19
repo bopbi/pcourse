@@ -1,2 +1,27 @@
-<h3>Dashboard</h3>
-Active Student = <%= @active_student %>
+<h1>Dashboard</h1>
+<h3>Active Student</h3>
+<%= @active_student %>
+
+<h3>Today Student</h3>
+<table>
+	<tr>
+		<th>Student Name</th>
+	</tr>
+	<% @today_students.each do |student| %>
+	<tr>
+		<td></td>
+	</tr>
+	<% end %>
+</table>
+
+<h3>Today Tutor</h3>
+<table>
+	<tr>
+		<th>Tutor Name</th>
+	</tr>
+	<% @today_students.each do |student| %>
+	<tr>
+		<td></td>
+	</tr>
+	<% end %>
+</table>

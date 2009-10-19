@@ -1,4 +1,5 @@
-<h1>Editing user</h1>
+<% title "Editting Users" %>
+<h1>Editing User</h1>
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
@@ -16,8 +17,8 @@
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
-    <%= f.label :type %><br />
-    <%= f.select :type, @type.sort,{ :prompt => 'Select Type' } %>
+    <%= f.label :role %><br />
+    <%= f.select :role, @role.sort, :prompt => 'Select Role' %>
   </p>
   <p>
     <%= f.submit 'Update' %>

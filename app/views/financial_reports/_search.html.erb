@@ -1,0 +1,17 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :financial_report_date_equals, "Financial Report Date" %><br />
+    <%= f.date_select :financial_report_date_equals, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :transaction_type_id_equals, "Transaction Type" %><br />
+    <%= f.collection_select :transaction_type_id_equals, TransactionType.all , :id, :transaction_type_code, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :value_equals, "Value" %><br />
+    <%= f.text_field :value_equals %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

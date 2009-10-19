@@ -1,9 +1,13 @@
 <h1>Listing Course Types</h1>
 <%= link_to 'New Course Type', new_course_type_path %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
+<div id="search_form" class="clear">
+  <%= render "search" %>
+</div>
 <table>
   <tr>
-    <th>Course type name</th>
-    <th>Course type fee</th>
+    <th>Course Type Name</th>
+    <th>Course Type Fee</th>
     <th colspan="3">Action</th>
   </tr>
 

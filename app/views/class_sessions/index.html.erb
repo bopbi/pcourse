@@ -1,10 +1,14 @@
 <% title "Listing Class Session" %>
 <h1>Listing Class Sessions</h1>
 <%= link_to 'New Class Session', new_class_session_path %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
+<div id="search_form" class="clear">
+  <%= render "search" %>
+</div>
 <table>
   <tr>
     <th>Course Type</th>
-    <th>Class session name</th>
+    <th>Class Session name</th>
     <th>Day</th>
     <th>Start</th>
     <th colspan="3">Action</th>

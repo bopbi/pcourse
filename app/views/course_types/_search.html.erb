@@ -1,0 +1,13 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :course_type_name_like, "Course Type Name" %><br />
+    <%= f.text_field :course_type_name_like %>
+  </p>
+  <p>
+    <%= f.label :course_type_fee_equals, "Course Type Fee" %><br />
+    <%= f.text_field :course_type_fee_equals %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

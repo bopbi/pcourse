@@ -1,0 +1,21 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :course_type_id_equals, "Course Type" %><br />
+    <%= f.collection_select :course_type_id_equals, CourseType.all , :id, :course_type_name, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :class_session_name_like, "Class Session Name" %><br />
+    <%= f.text_field :class_session_name_like %>
+  </p>
+  <p>
+    <%= f.label :day_like, "Day" %><br />
+    <%= f.text_field :day_like %>
+  </p>
+  <p>
+    <%= f.label :start_like, "Start" %><br />
+    <%= f.text_field :start_like %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

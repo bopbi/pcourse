@@ -2,7 +2,8 @@ class CourseTypesController < ApplicationController
   # GET /course_types
   # GET /course_types.xml
   def index
-    @course_types = CourseType.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
+    @search = CourseType.search(params[:search])
+    @course_types = @search.all.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
 
     respond_to do |format|
       format.html # index.html.erb

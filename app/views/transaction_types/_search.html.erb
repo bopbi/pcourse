@@ -1,0 +1,17 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :transaction_type_code_like, "Transaction Type Code" %><br />
+    <%= f.text_field :transaction_type_code_like %>
+  </p>
+  <p>
+    <%= f.label :transaction_type_name_like, "Transaction Name" %><br />
+    <%= f.text_field :transaction_type_name_like %>
+  </p>
+  <p>
+    <%= f.label :debit_equals, "Debit" %><br />
+    <%= f.check_box :debit_equals %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

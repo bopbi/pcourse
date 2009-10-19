@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091016150001) do
+ActiveRecord::Schema.define(:version => 20091018065753) do
 
   create_table "class_sessions", :force => true do |t|
     t.string   "class_session_name"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20091016150001) do
     t.boolean  "attendance"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "student_attendances_date"
+    t.date     "student_attendance_date"
   end
 
   create_table "students", :force => true do |t|
@@ -98,6 +98,9 @@ ActiveRecord::Schema.define(:version => 20091016150001) do
     t.string   "tutor_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "tutor_address"
+    t.string   "tutor_phone"
+    t.string   "tutor_handphone"
   end
 
   create_table "users", :force => true do |t|
@@ -105,7 +108,7 @@ ActiveRecord::Schema.define(:version => 20091016150001) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.string   "type"
+    t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

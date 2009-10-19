@@ -1,9 +1,13 @@
 <h1>Listing Financial Reports</h1>
 <%= link_to 'New Financial Report', new_financial_report_path %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
+<div id="search_form" class="clear">
+  <%= render "search" %>
+</div>
 <table>
   <tr>
-    <th>Financial report date</th>
-    <th>Transaction type</th>
+    <th>Financial Report Date</th>
+    <th>Transaction Type</th>
     <th>Value</th>
     <th>Debit</th>
     <th>User</th>
@@ -13,7 +17,7 @@
 <% @financial_reports.each do |financial_report| %>
   <tr>
     <td><%=h financial_report.financial_report_date %></td>
-    <td><%=h financial_report.transaction_type.transaction_type_code %></td>
+    <td><%=h financial_report.transaction_type.transaction_type_code rescue nil %></td>
     <td><%=h financial_report.value %></td>
     <td><%=h financial_report.debit %></td>
     <td><%=h financial_report.user_id %></td>

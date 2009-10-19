@@ -2,7 +2,8 @@ class TutorAttendancesController < ApplicationController
   # GET /tutor_attendances
   # GET /tutor_attendances.xml
   def index
-    @tutor_attendances = TutorAttendance.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
+    @search = TutorAttendance.clean_search params[:search]
+    @tutor_attendances = @search.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
 
     respond_to do |format|
       format.html # index.html.erb

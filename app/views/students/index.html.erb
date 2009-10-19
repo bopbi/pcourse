@@ -1,6 +1,10 @@
 <% title "Listing Students" %>
 <h1>Listing Students</h1>
 <%= link_to 'New Student', new_student_path %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
+<div id="search_form" class="clear">
+  <%= render "search" %>
+</div>
 <table>
   <tr>
     <th>Student no</th>

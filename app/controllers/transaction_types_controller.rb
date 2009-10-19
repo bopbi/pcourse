@@ -2,7 +2,8 @@ class TransactionTypesController < ApplicationController
   # GET /transaction_types
   # GET /transaction_types.xml
   def index
-    @transaction_types = TransactionType.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
+    @search = TransactionType.search(params[:search])
+    @transaction_types = @search.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
 
     respond_to do |format|
       format.html # index.html.erb

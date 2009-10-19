@@ -1,0 +1,14 @@
+<% form_for(@search) do |f| %>
+
+  <p>
+    <%= f.label :username_like, "Username" %><br />
+    <%= f.text_field :username_like %>
+  </p>
+  <p>
+    <%= f.label :role_like, "Role" %><br />
+    <%= f.select :role_like, @role.sort, :prompt => 'Select Role'  %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

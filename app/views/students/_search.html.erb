@@ -1,0 +1,57 @@
+<% form_for @search do |f| %>
+<p>
+  <%= f.label :student_no_equals, "Student No" %><br />
+  <%= f.text_field :student_no_equals %>
+</p>
+<p>
+  <%= f.label :register_date_equal, "Register Date" %><br />
+  <%= f.date_select :register_date_equals, :include_blank => true %>
+</p>
+<p>
+  <%= f.label :name_like, "Name" %><br />
+  <%= f.text_field :name_like %>
+</p>
+<p>
+  <%= f.label :place_birth_like, "Place Birth" %><br />
+  <%= f.text_field :place_birth_like %>
+</p>
+<p>
+  <%= f.label :date_birth_equals, "Date Birth" %><br />
+  <%= f.date_select :date_birth_equals, :start_year => 1995, :include_blank => true, :class => "datepicker" %>
+</p>
+<p>
+  <%= f.label :address_like, "Address" %><br />
+  <%= f.text_area :address_like %>
+</p>
+<p>
+  <%= f.label :phone_number_like, "Phone Number" %><br />
+  <%= f.text_field :phone_number_like %>
+</p>
+<p>
+  <%= f.label :handphone_number_like, "Handphone Number" %><br />
+  <%= f.text_field :handphone_number_like %>
+</p>
+<p>
+  <%= f.label :school_id_equals, "School" %><br />
+  <%= f.collection_select :school_id_equals, School.all , :id, :school_name, :include_blank => true %>
+</p>
+<p>
+  <%= f.label :grade_equals, "Grade" %><br />
+  <%= f.text_field :grade_equals %>
+</p>
+<p>
+  <%= f.label :father_name_like, "Father Name" %><br />
+  <%= f.text_field :father_name_like %>
+</p>
+<p>
+  <%= f.label :mother_name_like, "Mother Name" %><br />
+  <%= f.text_field :mother_name_like %>
+</p>
+<p>
+  <%= f.label :status_equals, "Status" %><br />
+  <%= f.check_box :status_equals %> Active
+</p>
+<p>
+  <%= f.submit 'Search' %>
+</p>
+<% end %>

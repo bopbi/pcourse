@@ -2,7 +2,8 @@ class ClassSessionsController < ApplicationController
   # GET /class_sessions
   # GET /class_sessions.xml
   def index
-    @class_sessions = ClassSession.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
+    @search = ClassSession.search(params[:search])
+    @class_sessions = @search.all.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
 
     respond_to do |format|
       format.html # index.html.erb

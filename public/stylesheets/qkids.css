@@ -73,3 +73,7 @@ table {
 #main_nav {
 	margin-top: 10px;
 }
+
+.popup table, .popup td {
+	border: 0px;
+}

@@ -1,0 +1,13 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :tutor_no_equals, "Tutor Number" %><br />
+    <%= f.text_field :tutor_no_equals %>
+  </p>
+  <p>
+    <%= f.label :tutor_name_like, "Tutor Name" %><br />
+    <%= f.text_field :tutor_name_like %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

@@ -1,0 +1,21 @@
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :student_id_equals, "Student" %><br />
+    <%= f.collection_select :student_id_equals, Student.status_equals(true) , :id, :name, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :class_session_id_equals, "Class Session" %><br />
+    <%= f.collection_select :class_session_id_equals, ClassSession.all , :id, :class_session_name, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :student_attendance_date_equals, "Student Attendance Date" %><br />
+    <%= f.date_select :student_attendance_date_equals %>
+  </p>
+  <p>
+    <%= f.label :attendance_equals, "Attendance" %><br />
+    <%= f.check_box :attendance_equals %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>
