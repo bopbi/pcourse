@@ -1,0 +1,21 @@
+<% title "Editting Student Schedule" %>
+<h1>Editing Student Schedule</h1>
+
+<% form_for(@student_schedule) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :student_id %><br />
+    <%= f.collection_select :student_id, Student.status_equals(true) , :id, :name_with_grade %>
+  </p>
+  <p>
+    <%= f.label :class_session_id %><br />
+    <%= f.collection_select :class_session_id, ClassSession.all , :id, :class_session_name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @student_schedule %> |
+<%= link_to 'Back', student_schedules_path %>

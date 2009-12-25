@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  student_id: 1
+  month_payment: 2009-10-28
+
+two:
+  student_id: 1
+  month_payment: 2009-10-28

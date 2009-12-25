@@ -1,0 +1,15 @@
+<h5>Search</h5>
+<hr />
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :student_id_equals, "Student" %><br />
+    <%= f.collection_select :student_id_equals, Student.status_equals(true), :id, :name %>
+  </p>
+  <p>
+    <%= f.label :month_payment_equals, "Month Payment" %><br />
+    <%= f.date_select :month_payment_equals, :discard_day => true %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

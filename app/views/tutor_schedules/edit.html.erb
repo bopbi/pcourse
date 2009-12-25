@@ -1,0 +1,20 @@
+<h1>Editing tutor_schedule</h1>
+
+<% form_for(@tutor_schedule) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tutor_id %><br />
+    <%= f.collection_select :tutor_id, Tutor.all , :id, :tutor_name %>
+  </p>
+  <p>
+    <%= f.label :class_session_id %><br />
+    <%= f.collection_select :class_session_id, ClassSession.all , :id, :class_session_name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tutor_schedule %> |
+<%= link_to 'Back', tutor_schedules_path %>

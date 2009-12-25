@@ -1,8 +1,10 @@
 <% title "Listing Class Session" %>
 <h1>Listing Class Sessions</h1>
-<%= link_to 'New Class Session', new_class_session_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<% if can? :create, ClassSession %>
+<%= link_to 'New Class Session', new_class_session_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
@@ -18,11 +20,15 @@
   <tr>
     <td><%=h class_session.course_type.course_type_name rescue nil %></td>
     <td><%=h class_session.class_session_name %></td>
-    <td><%=h class_session.day %></td>
-    <td><%=h class_session.start %></td>
-    <td><%= link_to 'Show', class_session %></td>
-    <td><%= link_to 'Edit', edit_class_session_path(class_session) %></td>
-    <td><%= link_to 'Destroy', class_session, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h @day[class_session.day.to_i][0] %></td>
+    <td><%=h @time[class_session.start.to_i] %></td>
+    <td><%= link_to 'Show', class_session, :class => "ss_sprite ss_zoom" %></td>
+	<% if can? :edit, ClassSession %>
+    <td><%= link_to 'Edit', edit_class_session_path(class_session), :class => "ss_sprite ss_pencil" %></td>
+	<% end %>
+	<% if can? :delete, ClassSession %>
+    <td><%= link_to 'Destroy', class_session, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>

@@ -1,18 +1,10 @@
-body {
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-a:hover {
+a, a:visited, a:hover, table a:active, table a:link, table a:visited {
 	background-color: transparent;
-	color: #000000;
+	color: #ff0000;
 }
 
-.float_left {
-	float: left;
-}
-
-.float_right {
-	float: right;
+body {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 table {
@@ -23,7 +15,7 @@ table {
 	background-color: #fdd910;
 	border: 1px solid #a8850c;
 	padding: 10px;
-	margin: 10px;
+	margin: 10px 0px 15px 0px;
 }
 
 #header_container {
@@ -47,13 +39,13 @@ table {
 }
 
 #header_box a:hover {
-	color: #000000;
+	color: #ff0000;
 }
 
 #login_box {
 	border: 1px solid #b0b0b0;
 	padding: 10px;
-	width: 280px;
+	width: 300px;
 	margin: 100px auto;
 }
 
@@ -72,6 +64,11 @@ table {
 
 #main_nav {
 	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#schedule th {
+	background-color: #fcfea3;
 }
 
 .popup table, .popup td {

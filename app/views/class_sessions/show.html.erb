@@ -11,12 +11,12 @@
 
 <p>
   <b>Day:</b>
-  <%=h @class_session.day %>
+  <%= @day[@class_session.day.to_i][0] %>
 </p>
 
 <p>
   <b>Start:</b>
-  <%=h @class_session.start %>
+  <%=h @time[@class_session.start.to_i] %>
 </p>
 
 

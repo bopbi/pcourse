@@ -5,7 +5,7 @@
 
   <p>
     <%= f.label :student_id %><br />
-    <%= f.collection_select :student_id, Student.status_equals(true) , :id, :name %>
+    <%= f.collection_select :student_id, Student.status_equals(true) , :id, :name_with_grade %>
   </p>
   <p>
     <%= f.label :class_session_id %><br />

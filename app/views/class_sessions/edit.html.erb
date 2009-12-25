@@ -13,11 +13,11 @@
   </p>
   <p>
     <%= f.label :day %><br />
-    <%= f.text_field :day %>
+    <%= f.select :day, @day, :prompt => 'Select Day' %>
   </p>
   <p>
     <%= f.label :start %><br />
-    <%= f.text_field :start %>
+    <%= f.select :start, @time.sort %>
   </p>
   <p>
     <%= f.submit 'Update' %>

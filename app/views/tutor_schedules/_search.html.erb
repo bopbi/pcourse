@@ -1,0 +1,15 @@
+<h5>Search</h5>
+<hr />
+<% form_for(@search) do |f| %>
+  <p>
+    <%= f.label :tutor_id_equals, "Tutor" %><br />
+    <%= f.collection_select :tutor_id_equals, Tutor.all , :id, :tutor_name %>
+  </p>
+  <p>
+    <%= f.label :class_session_id_equals, "Class Session" %><br />
+    <%= f.collection_select :class_session_id_equals, ClassSession.all , :id, :class_session_name %>
+  </p>
+  <p>
+    <%= f.submit 'Search' %>
+  </p>
+<% end %>

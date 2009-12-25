@@ -1,4 +1,5 @@
 class FinancialReportsController < ApplicationController
+  load_and_authorize_resource
   # GET /financial_reports
   # GET /financial_reports.xml
   def index

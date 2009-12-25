@@ -59,16 +59,14 @@
 </p>
 
 <p>
-	<%= image_tag @student.photo.url(:medium) rescue nil %>
+  <%= image_tag @student.photo.url(:medium) rescue nil %>
 </p>
 
 <p>
   <b>Status:</b>
-  	<% if @student.status %>
-		Active
-	<% else %>
-		Out
-	<% end %>
+  <% if @student.status %>
+	Active <% else %> Out
+  <% end %>
 </p>
 
 

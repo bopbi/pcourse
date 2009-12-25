@@ -1,6 +1,8 @@
 class Student < ActiveRecord::Base
   belongs_to :school
+  has_many :student_payments
   has_many :student_attendances
+  has_many :student_schedules
   
   has_attached_file :photo, :styles => { :small => "150x150>" , :medium => "300x300>"},
                       :url => "/assets/student/:id/:style/:basename.:extension",
@@ -8,6 +10,10 @@ class Student < ActiveRecord::Base
 
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+  
+  def name_with_grade
+    "#{name} ( #{grade} )"
+  end
   
   def self.clean_search(hash)
     if !hash.nil?

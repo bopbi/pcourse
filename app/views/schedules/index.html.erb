@@ -1,0 +1,510 @@
+<table id="schedule">
+	<thead>
+		<tr>
+			<th>Time</th>
+			<th>Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th>Saturday</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>06.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '6') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '6') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '6') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '6') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '6') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '6') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '6') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>07.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '7') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '7') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '7') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '7') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '7') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '7') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '7') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>08.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '8') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '8') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '8') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '8') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '8') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '8') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '8') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>09.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '9') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '9') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '9') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '9') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '9') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '9') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '9') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>10.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '10') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '10') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '10') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '10') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '10') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '10') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '10') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>11.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '11') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '11') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '11') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '11') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '11') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '11') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '11') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>12.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '12') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '12') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '12') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '12') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '12') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '12') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '12') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>13.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '13') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '13') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '13') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '13') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '13') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '13') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '13') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>14.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '14') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '14') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '14') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '14') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '14') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '14') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '14') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>15.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '15') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '15') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '15') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '15') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '15') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '15') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '15') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>16.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '16') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '16') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '16') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '16') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '16') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '16') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '16') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>17.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '17') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '17') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '17') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '17') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '17') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '17') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '17') %>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td>18.00</td>
+			<td>
+				<% @sunday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '0' && class_session.start == '18') %>
+				<% end %>
+			</td>
+			<td>
+				<% @monday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '1' && class_session.start == '18') %>
+				<% end %>
+			</td>
+			<td>
+				<% @tuesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '2' && class_session.start == '18') %>
+				<% end %>
+			</td>
+			<td>
+				<% @wednesday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '3' && class_session.start == '18') %>
+				<% end %>
+			</td>
+			<td>
+				<% @thursday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '4' && class_session.start == '18') %>
+				<% end %>
+			</td>
+			<td>
+				<% @friday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '5' && class_session.start == '18') %>
+				<% end %>
+			</td>
+			<td>
+				<% @saturday.each do |class_session| %>
+					<%= '<div>' + link_to(class_session.class_session_name, {:action => "details", :id => class_session.id}, :class => "facebox_call") + '</div>' if (class_session.day == '6' && class_session.start == '18') %>
+				<% end %>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,3 +1,5 @@
+<h5>Search</h5>
+<hr />
 <% form_for(@search) do |f| %>
   <p>
     <%= f.label :course_type_id_equals, "Course Type" %><br />
@@ -9,11 +11,11 @@
   </p>
   <p>
     <%= f.label :day_like, "Day" %><br />
-    <%= f.text_field :day_like %>
+    <%= f.select :day_like, @day, :prompt => 'Select Day' %>
   </p>
   <p>
     <%= f.label :start_like, "Start" %><br />
-    <%= f.text_field :start_like %>
+    <%= f.select :start_like, @time.sort %>
   </p>
   <p>
     <%= f.submit 'Search' %>

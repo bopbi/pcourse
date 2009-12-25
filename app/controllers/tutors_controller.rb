@@ -1,4 +1,5 @@
 class TutorsController < ApplicationController
+  load_and_authorize_resource
   # GET /tutors
   # GET /tutors.xml
   def index

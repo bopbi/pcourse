@@ -1,4 +1,5 @@
 class StudentAttendancesController < ApplicationController
+  load_and_authorize_resource
   # GET /student_attendances
   # GET /student_attendances.xml
   def index

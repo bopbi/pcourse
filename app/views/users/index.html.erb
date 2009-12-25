@@ -1,8 +1,10 @@
 <% title "Listing Users" %>
 <h1>Listing Users</h1>
-<%= link_to 'New User', new_user_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<% if can? :create, User %>
+<%= link_to 'New User', new_user_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
@@ -16,9 +18,13 @@
   <tr>
     <td><%=h user.username %></td>
     <td><%=h user.role %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', user, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, User %>
+    <td><%= link_to 'Edit', edit_user_path(user), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, user %>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

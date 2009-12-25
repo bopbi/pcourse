@@ -1,14 +1,16 @@
 <h1>Listing Tutor Attendances</h1>
-<%= link_to 'New Tutor Attendance', new_tutor_attendance_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<% if can? :create, TutorAttendance %>
+<%= link_to 'New Tutor Attendance', new_tutor_attendance_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
   <tr>
     <th>Tutor</th>
     <th>Class Session</th>
-    <th>Attendance day</th>
+    <th>Tutor Attendance Date</th>
     <th>Attendance</th>
     <th colspan="3">Action</th>
   </tr>
@@ -17,11 +19,15 @@
   <tr>
     <td><%=h tutor_attendance.tutor.tutor_name %></td>
     <td><%=h tutor_attendance.class_session.class_session_name rescue nil %></td>
-    <td><%=h tutor_attendance.attendance_day %></td>
+    <td><%=h tutor_attendance.tutor_attendance_date %></td>
     <td><%=h tutor_attendance.attendance %></td>
-    <td><%= link_to 'Show', tutor_attendance %></td>
-    <td><%= link_to 'Edit', edit_tutor_attendance_path(tutor_attendance) %></td>
-    <td><%= link_to 'Destroy', tutor_attendance, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', tutor_attendance, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, TutorAttendance %>
+    <td><%= link_to 'Edit', edit_tutor_attendance_path(tutor_attendance), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, TutorAttendance %>
+    <td><%= link_to 'Destroy', tutor_attendance, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

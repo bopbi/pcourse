@@ -1,7 +1,9 @@
 <h1>Listing Transaction Types</h1>
-<%= link_to 'New Transaction Type', new_transaction_type_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<% if can? :create, TransactionType %>
+<%= link_to 'New Transaction Type', new_transaction_type_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
@@ -17,9 +19,13 @@
     <td><%=h transaction_type.transaction_type_code %></td>
     <td><%=h transaction_type.transaction_type_name %></td>
     <td><%=h transaction_type.debit %></td>
-    <td><%= link_to 'Show', transaction_type %></td>
-    <td><%= link_to 'Edit', edit_transaction_type_path(transaction_type) %></td>
-    <td><%= link_to 'Destroy', transaction_type, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', transaction_type, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, TransactionType %>
+    <td><%= link_to 'Edit', edit_transaction_type_path(transaction_type), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, TransactionType %>
+    <td><%= link_to 'Destroy', transaction_type, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

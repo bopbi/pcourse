@@ -1,0 +1,99 @@
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-10-26 06:32:05) [GET]
+Rendering template within layouts/qkids
+Rendering user_sessions/new
+Completed in 154ms (View: 98, DB: 45) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-10-26 06:32:08) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"d", "password"=>"d"}, "authenticity_token"=>"dkTmVFIbfck34eZcOVwgfACjIFriphR43MhZ0TCaBmU="}
+Rendering template within layouts/qkids
+Rendering user_sessions/new
+Completed in 337ms (View: 16, DB: 2) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-10-26 06:32:15) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"root", "password"=>"root"}, "authenticity_token"=>"dkTmVFIbfck34eZcOVwgfACjIFriphR43MhZ0TCaBmU="}
+Rendering template within layouts/qkids
+Rendering user_sessions/new
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-10-26 06:43:37) [GET]
+Rendering template within layouts/qkids
+Rendering user_sessions/new
+Completed in 38ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-10-26 06:43:41) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"root", "password"=>"root"}, "authenticity_token"=>"dkTmVFIbfck34eZcOVwgfACjIFriphR43MhZ0TCaBmU="}
+Redirected to http://localhost:3000/dashboard
+Completed in 231ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-26 06:43:41) [GET]
+Rendering template within layouts/qkids
+Rendering dashboard/index
+Completed in 171ms (View: 17, DB: 49) | 200 OK [http://localhost/dashboard]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2009-10-26 06:43:46) [GET]
+Rendering template within layouts/qkids
+Rendering students/index
+Completed in 105ms (View: 62, DB: 34) | 200 OK [http://localhost/students]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2009-10-26 06:43:48) [GET]
+Rendering template within layouts/qkids
+Rendering schools/index
+Completed in 39ms (View: 27, DB: 2) | 200 OK [http://localhost/schools]
+
+
+Processing FinancialReportsController#index (for 127.0.0.1 at 2009-10-26 06:43:49) [GET]
+Rendering template within layouts/qkids
+Rendering financial_reports/index
+Completed in 85ms (View: 37, DB: 38) | 200 OK [http://localhost/financial_reports]
+
+
+Processing TransactionTypesController#index (for 127.0.0.1 at 2009-10-26 06:43:51) [GET]
+Rendering template within layouts/qkids
+Rendering transaction_types/index
+Completed in 58ms (View: 29, DB: 19) | 200 OK [http://localhost/transaction_types]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-10-26 06:43:52) [GET]
+Rendering template within layouts/qkids
+Rendering users/index
+Completed in 43ms (View: 33, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-10-26 06:43:56) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/qkids
+Rendering users/edit
+Completed in 27ms (View: 25, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-10-26 06:43:59) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"dkTmVFIbfck34eZcOVwgfACjIFriphR43MhZ0TCaBmU=", "id"=>"1", "user"=>{"password_confirmation"=>"", "role"=>"Admin", "username"=>"root", "password"=>""}}
+Redirected to http://localhost:3000/users/1
+Completed in 12ms (DB: 3) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-10-26 06:43:59) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/qkids
+Rendering users/show
+Completed in 18ms (View: 15, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-10-26 06:44:02) [GET]
+Redirected to http://localhost:3000/
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-10-26 06:44:02) [GET]
+Rendering template within layouts/qkids
+Rendering user_sessions/new
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]

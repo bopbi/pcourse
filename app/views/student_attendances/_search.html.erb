@@ -1,3 +1,5 @@
+<h5>Search</h5>
+<hr />
 <% form_for(@search) do |f| %>
   <p>
     <%= f.label :student_id_equals, "Student" %><br />
@@ -9,7 +11,7 @@
   </p>
   <p>
     <%= f.label :student_attendance_date_equals, "Student Attendance Date" %><br />
-    <%= f.date_select :student_attendance_date_equals %>
+    <%= f.date_select :student_attendance_date_equals, :include_blank => true %>
   </p>
   <p>
     <%= f.label :attendance_equals, "Attendance" %><br />

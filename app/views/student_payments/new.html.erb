@@ -1,0 +1,20 @@
+<% title 'New Student Payment' %>
+<h1>New Student Payment</h1>
+
+<% form_for(@student_payment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :student_id %><br />
+    <%= f.collection_select :student_id, Student.status_equals(true), :id, :name_with_grade %>
+  </p>
+  <p>
+    <%= f.label :month_payment %><br />
+    <%= f.date_select :month_payment, :discard_day => true %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', student_payments_path %>

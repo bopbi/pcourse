@@ -1,7 +1,9 @@
 <h1>Listing Financial Reports</h1>
-<%= link_to 'New Financial Report', new_financial_report_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<% if can? :create, FinancialReport %>
+<%= link_to 'New Financial Report', new_financial_report_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
@@ -21,9 +23,13 @@
     <td><%=h financial_report.value %></td>
     <td><%=h financial_report.debit %></td>
     <td><%=h financial_report.user_id %></td>
-    <td><%= link_to 'Show', financial_report %></td>
-    <td><%= link_to 'Edit', edit_financial_report_path(financial_report) %></td>
-    <td><%= link_to 'Destroy', financial_report, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', financial_report, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, FinancialReport %>
+    <td><%= link_to 'Edit', edit_financial_report_path(financial_report), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, FinancialReport %>
+    <td><%= link_to 'Destroy', financial_report, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

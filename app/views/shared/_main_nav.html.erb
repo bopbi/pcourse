@@ -1,4 +1,4 @@
-<div id="main_nav" class="grid_12">
+<div id="main_nav">
 <ul class="sf-menu">
 	<li> <%= link_to "Dashboard", :controller => "dashboard" %> </li>
 	<li>
@@ -11,7 +11,6 @@
 	<li>
 		<a href="#">Class</a>
 		<ul>
-			<li> <%= link_to "Student Attendance", student_attendances_path %> </li>
 			<li> <%= link_to "Class Session", class_sessions_path %> </li>
 			<li> <%= link_to "Course Type", course_types_path %> </li>
 		</ul>
@@ -20,6 +19,20 @@
 		<a href="#">Tutors</a>
 		<ul>
 			<li> <%= link_to "Tutors List", tutors_path %> </li>
+		</ul>
+	</li>
+	<li><%= link_to "Schedules", :controller => "schedules" %></li>
+	<li>
+		<a href="#">Schedulling</a>
+		<ul>
+			<li> <%= link_to "Student Schedule", student_schedules_path %> </li>
+			<li> <%= link_to "Tutor Schedule", tutor_schedules_path %> </li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Attendances</a>
+		<ul>
+			<li> <%= link_to "Student Attendance", student_attendances_path %> </li>
 			<li> <%= link_to "Tutor Attendance", tutor_attendances_path %> </li>
 		</ul>
 	</li>
@@ -28,6 +41,7 @@
 		<ul>
 			<li> <%= link_to "Finance Report", financial_reports_path %> </li>
 			<li> <%= link_to "Transaction Type", transaction_types_path %> </li>
+			<li> <%= link_to "Student Payment", student_payments_path %> </li>
 		</ul>
 	</li>
 	<li>

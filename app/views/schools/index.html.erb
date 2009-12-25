@@ -1,8 +1,9 @@
-
 <h1>Listing Schools</h1>
-<%= link_to 'New School', new_school_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<% if can? :create, School %>
+<%= link_to 'New School', new_school_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
@@ -16,11 +17,15 @@
 <% @schools.each do |school| %>
   <tr>
     <td><%=h school.school_no %></td>
-    <td><%=h school.school_name %></td>
+    <td><%= link_to school.school_name, students_school_path(school) %></td>
     <td><%=h school.school_address %></td>
-    <td><%= link_to 'Show', school %></td>
-    <td><%= link_to 'Edit', edit_school_path(school) %></td>
-    <td><%= link_to 'Destroy', school, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', school, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, School %>
+    <td><%= link_to 'Edit', edit_school_path(school), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, School %>
+    <td><%= link_to 'Destroy', school, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

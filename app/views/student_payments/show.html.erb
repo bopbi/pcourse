@@ -1,0 +1,14 @@
+
+<p>
+  <b>Student:</b>
+  <%=h @student_payment.student.name %>
+</p>
+
+<p>
+  <b>Month payment:</b>
+  <%=h @student_payment.month_payment %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_payment_path(@student_payment) %> |
+<%= link_to 'Back', student_payments_path %>

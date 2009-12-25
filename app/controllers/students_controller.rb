@@ -1,7 +1,17 @@
 class StudentsController < ApplicationController
+  load_and_authorize_resource
   # GET /students
   # GET /students.xml
   def index
+    @active_student = Student.status_equals(true).count
+    
+    @student_6_count = Student.status_equals(true).grade_equals("6").count
+    @student_5_count = Student.status_equals(true).grade_equals("5").count
+    @student_4_count = Student.status_equals(true).grade_equals("4").count
+    @student_3_count = Student.status_equals(true).grade_equals("3").count
+    @student_2_count = Student.status_equals(true).grade_equals("2").count
+    @student_1_count = Student.status_equals(true).grade_equals("1").count
+    
     @search = Student.clean_search params[:search]
     @students = @search.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
     respond_to do |format|
@@ -25,6 +35,7 @@ class StudentsController < ApplicationController
   # GET /students/new.xml
   def new
     @student = Student.new
+    @grade = { '6' => '6', '5' => '5', '4' => '4', '3' => '3', '2' => '2', '1' => '1' }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +46,7 @@ class StudentsController < ApplicationController
   # GET /students/1/edit
   def edit
     @student = Student.find(params[:id])
+    @grade = { '6' => '6', '5' => '5', '4' => '4', '3' => '3', '2' => '2', '1' => '1' }
   end
 
   # POST /students
@@ -82,4 +94,5 @@ class StudentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

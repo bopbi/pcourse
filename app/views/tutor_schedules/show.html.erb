@@ -1,0 +1,13 @@
+<p>
+  <b>Tutor:</b>
+  <%=h @tutor_schedule.tutor.tutor_name rescue nil %>
+</p>
+
+<p>
+  <b>Class session:</b>
+  <%=h @tutor_schedule.class_session.class_session_name rescue nil %>
+</p>
+
+
+<%= link_to 'Edit', edit_tutor_schedule_path(@tutor_schedule) %> |
+<%= link_to 'Back', tutor_schedules_path %>

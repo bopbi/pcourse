@@ -1,4 +1,5 @@
 class TransactionTypesController < ApplicationController
+  load_and_authorize_resource
   # GET /transaction_types
   # GET /transaction_types.xml
   def index

@@ -1,8 +1,19 @@
 <% title "Listing Students" %>
 <h1>Listing Students</h1>
-<%= link_to 'New Student', new_student_path %>
-<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox">Advanced Search</a></div>
-<div id="search_form" class="clear">
+<p>
+	Active Student = <%= @active_student %> |
+	<%= link_to "Grade 6 (#{@student_6_count}) ", :controller => "student_grade", :action => "index", :id => "6" %> |
+	<%= link_to "Grade 5 (#{@student_5_count}) ", :controller => "student_grade", :action => "index", :id => "5" %> |
+	<%= link_to "Grade 4 (#{@student_4_count}) ", :controller => "student_grade", :action => "index", :id => "4" %> |
+	<%= link_to "Grade 3 (#{@student_3_count}) ", :controller => "student_grade", :action => "index", :id => "3" %> |
+	<%= link_to "Grade 2 (#{@student_2_count}) ", :controller => "student_grade", :action => "index", :id => "2" %> |
+	<%= link_to "Grade 1 (#{@student_1_count}) ", :controller => "student_grade", :action => "index", :id => "1" %>
+</p>
+<% if can? :create, Student %>
+<%= link_to 'New Student', new_student_path, :class => "ss_sprite ss_add" %>
+<% end %>
+<div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
+<div id="search_form" class="hide">
   <%= render "search" %>
 </div>
 <table>
@@ -36,9 +47,13 @@
 			Out
 		<% end %>
 	</td>
-    <td><%= link_to 'Show', student %></td>
-    <td><%= link_to 'Edit', edit_student_path(student) %></td>
-    <td><%= link_to 'Destroy', student, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', student, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, Student %>
+    <td><%= link_to 'Edit', edit_student_path(student), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, Student %>
+    <td><%= link_to 'Destroy', student, :confirm => 'Are you sure?', :method => :delete , :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

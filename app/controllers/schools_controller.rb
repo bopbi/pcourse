@@ -1,4 +1,5 @@
 class SchoolsController < ApplicationController
+  load_and_authorize_resource
   # GET /schools
   # GET /schools.xml
   def index
@@ -82,5 +83,10 @@ class SchoolsController < ApplicationController
       format.html { redirect_to(schools_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def students
+    @school = School.find(params[:id])
+    @students = Student.school_id_equals(params[:id]).all.paginate :page => params[:page], :per_page => 10, :order => 'id DESC'
   end
 end

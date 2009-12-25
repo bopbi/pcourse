@@ -18,7 +18,7 @@
   </p>
   <p>
     <%= f.label :role %><br />
-    <%= f.select :role, @role.sort, :prompt => 'Select Role' %>
+    <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
   </p>
   <p>
     <%= f.submit 'Update' %>

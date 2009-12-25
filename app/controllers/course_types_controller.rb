@@ -1,4 +1,5 @@
 class CourseTypesController < ApplicationController
+  load_and_authorize_resource
   # GET /course_types
   # GET /course_types.xml
   def index

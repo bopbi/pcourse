@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tutor_schedules
+
+  map.resources :student_schedules
+
+  map.resources :student_payments
+
   map.resources :tutor_attendances
 
   map.resources :student_attendances
@@ -21,7 +27,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-  map.resources :schools
+  map.resources :schools, :member => { :students => :get }
 
   map.resources :students
 
