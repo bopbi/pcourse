@@ -1,5 +1,7 @@
 <h1>Listing Tutor Schedules</h1>
+<% if can? :create, TutorSchedule %>
 <%= link_to 'New Tutor Schedule', new_tutor_schedule_path, :class => "ss_sprite ss_add" %>
+<% end %>
 <div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
 <div id="search_form" class="hide">
   <%= render "search" %>
@@ -16,8 +18,12 @@
     <td><%=h tutor_schedule.tutor.tutor_name rescue nil %></td>
     <td><%=h tutor_schedule.class_session.class_session_name rescue nil %></td>
     <td><%= link_to 'Show', tutor_schedule, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, TutorSchedule %>
     <td><%= link_to 'Edit', edit_tutor_schedule_path(tutor_schedule), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, TutorSchedule %>
     <td><%= link_to 'Destroy', tutor_schedule, :confirm => 'Are you sure?', :method => :delete, :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

@@ -1,6 +1,8 @@
 <% title "Listing Student" %>
 <h1>Listing Student Schedules</h1>
+<% if can? :create, StudentSchedule %>
 <%= link_to 'New Student Schedule', new_student_schedule_path, :class => "ss_sprite ss_add" %>
+<% end %>
 <div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
 <div id="search_form" class="hide">
   <%= render "search" %>
@@ -17,8 +19,12 @@
     <td><%=h student_schedule.student.name rescue nil %></td>
     <td><%=h student_schedule.class_session.class_session_name rescue nil %></td>
     <td><%= link_to 'Show', student_schedule, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, StudentSchedule %>
     <td><%= link_to 'Edit', edit_student_schedule_path(student_schedule), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, StudentSchedule %>
     <td><%= link_to 'Destroy', student_schedule, :confirm => 'Are you sure?', :method => :delete, :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

@@ -1,6 +1,8 @@
 <% title "Listing Student Payments" %>
 <h1>Listing Student Payments</h1>
+<% if can? :create, StudentPayment %>
 <%= link_to 'New Student Payment', new_student_payment_path, :class => "ss_sprite ss_add" %>
+<% end %>
 <div class="float_right"> <%= link_to "View All", :action => "index" %> | <a id="search" href="#search_form" rel="facebox" class="ss_sprite ss_find">Advanced Search</a></div>
 <div id="search_form" class="hide">
   <%= render "search" %>
@@ -17,8 +19,12 @@
     <td><%=h student_payment.student.name rescue nil %></td>
     <td><%=h student_payment.month_payment %></td>
     <td><%= link_to 'Show', student_payment, :class => "ss_sprite ss_zoom" %></td>
+    <% if can? :edit, StudentPayment %>
     <td><%= link_to 'Edit', edit_student_payment_path(student_payment), :class => "ss_sprite ss_pencil" %></td>
+    <% end %>
+    <% if can? :delete, StudentPayment %>
     <td><%= link_to 'Destroy', student_payment, :confirm => 'Are you sure?', :method => :delete, :class => "ss_sprite ss_delete" %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
