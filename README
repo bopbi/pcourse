@@ -13,12 +13,18 @@ plugin dependency :
 paperclip ==> file upload
 
 ===================================
-
 to login as Admin
 
 http://localhost:3000/login
 username : root
 password : root
+
+===================================
+to login as Operator
+
+http://localhost:3000/login
+username : test
+password : test
 
 ===================================
 

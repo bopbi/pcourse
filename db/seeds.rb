@@ -7,3 +7,5 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 User.delete_all
 User.create(:username => 'root', :password => 'root', :password_confirmation => 'root', :role => 'admin')
+User.create(:username => 'test', :password => 'test', :password_confirmation => 'test', :role => 'operator')
+
